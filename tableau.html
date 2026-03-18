@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gnosis</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="tableau.css">
+    <script src="recherche.js" defer></script>
+
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <div id="results"></div>
+        <div class="burger-menu">
+            <div class="burger-icon" onclick="toggleMenu()">☰</div>
+            <div id="burgerContent" class="burger-content">
+                <a href="svt.html">Sciences de la Vie et de la Terre</a>
+                <a href="Physique.html">Physique-Chimie</a>
+        </div>
+        </div>
+        <a href="index.html">
+            <h1>&#8962;</h1>
+        </a>
+        <div class="info">&#128712;</div>
+    </div>
+    <div class="title">Tableau Périodique</div>
+    <input class="search-box"
+           type="text"
+           id="search"
+           placeholder="&#8981; Rechercher..."
+           onkeyup="rechercher()">
+
+</div>
+
+<main class="page-content"></main>
+<img src="ptable.png" alt="" class="ptable">
+<a href="tableau2.html"><img src="tableau-periodique-elements.jpg" alt="" class="lien-image"></a>
+</main>
+
+<footer class="footer" >
+    <a href="presentation.html" class="lien">Pour en savoir plus sur nous</a>
+    <br>
+    <a href="cookies.html" class="lien">Cookies</a>
+</footer>
+</body>
+</html>

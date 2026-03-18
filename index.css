@@ -1,0 +1,278 @@
+h1 {
+    color: black;
+    font-size: 3em;
+}
+
+h2 {
+    color: black;
+    font-size: 1.5em;
+}
+
+h3 {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+h4 {
+    color: rgb(0, 0, 0);
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* LAYOUT PRINCIPAL */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background-color: blue;
+}
+
+/* Partie gauche (burger, home, info) */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Icône home */
+.left h1 {
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Icône info */
+.info {
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Titre centré */
+.title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Barre de recherche */
+.search-box {
+    height: 35px;
+    font-size: 16px;
+    padding: 0 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Zone résultats */
+#results {
+    position: absolute;
+    right: 20px;
+    top: 90px;
+    width: 250px;
+    background: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+/* Résultat individuel */
+.result {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.result:last-child {
+    border-bottom: none;
+}
+
+.result a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.result:hover {
+    background: #f0f0f0;
+}
+
+/* BURGER */
+.burger-menu {
+    position: relative;
+}
+
+.burger-icon {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Menu déroulant */
+.burger-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    width: 250px;
+    z-index: 2000;
+}
+
+.burger-content a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #eee;
+}
+
+.burger-content a:hover {
+    background: #f0f0f0;
+}
+
+.burger-content a:last-child {
+    border-bottom: none;
+}
+
+/* CONTENU PRINCIPAL */
+.page-content {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 16px;
+    margin-top: 3em;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+.ptable {
+    width: 80%;
+    height: auto; 
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 3em;
+}
+
+.lien {
+    color: white;
+    text-decoration: none;
+}
+
+.lien-image {
+    height: 120px; 
+    width: auto; 
+    margin-top: 50px; 
+    justify-content: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex; 
+}
+
+.tooltip-word{
+    color:#1a73e8;
+    cursor:pointer;
+    position:relative;
+    border-bottom:1px dotted #1a73e8;
+}
+
+.tooltip-box{
+    color: #000;
+    position:absolute;
+    bottom:120%;
+    left:50%;
+    transform:translateX(-50%);
+    background:white;
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:10px;
+    width:300px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    opacity:0;
+    pointer-events:none;
+    transition:0.2s;
+}
+
+.tooltip-word:hover .tooltip-box{
+    opacity:1;
+}
+
+/* disposition image + texte */
+.tooltip-content{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+}
+
+/* image redimensionnée automatiquement */
+.tooltip-content img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+/* texte */
+.tooltip-text{
+    font-size:14px;
+    line-height:1.4;
+}
+
+.content-row{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+}

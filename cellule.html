@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cellule</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="tableau.css">
+    <script src="recherche.js" defer></script>
+    <script src="script.js"></script>
+    <script src="reference.js"></script>
+</head>
+<body>
+<div class="header">
+
+    <div class="left">
+        <div class="burger-menu">
+    <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+    <div id="burgerContent" class="burger-content">
+        <a href="svt.html">Sciences de la Vie et de la Terre</a>
+        <a href="Physique.html">Physique-Chimie</a>
+    </div>
+</div>
+
+        <a href="index.html" class="lien">
+            <h1>&#8962;</h1>
+        </a>
+
+        <div class="info"><a href="presentation.html" class="lien"><h1>&#128712;</h1></a></div>
+
+        
+    </div>
+
+    <div class="title">Gnosis</div>
+
+    <input class="search-box"
+           type="text"
+           id="search"
+           placeholder="&#8981; Rechercher..."
+           onkeyup="rechercher()">
+
+</div>
+
+<h4>Schéma interactif d'une cellule animale</h4>
+
+<div id="results"></div>
+
+<main class="page-content">
+<div class="table-layout">
+
+  <div class="table-container">
+    <img id="ptable" src="cellule humaine.avif" usemap="#image-map">
+</div>
+
+  <div id="info-panel">
+    <h2 id="element-name"></h2>
+    <div id="element-info"></div>
+  </div>
+
+</div>
+
+<map name="image-map">
+    <area alt="nucléole"
+    title="nucléole"
+    href="#"
+    coords="489,317,512,336,507,359,481,371,452,375,426,367,433,339,458,325"
+    shape="poly"
+    onclick="showElement('<h3>Nucléole</h3> <br> <h5>Le nucléole sert a fabriquer les ribosomes et l&rsquo;ARN ribosomique.</h5>')"
+    style="cursor:pointer">
+
+    <area alt="mitochondrie"
+    title="mitochondrie"
+    href="#"
+    coords="326,455,353,472,396,488,429,497,448,513,448,537,432,547,413,551,390,556,364,549,316,527,295,496,289,466,303,452"
+    shape="poly"
+    onclick="showElement(mitochondrie)"
+    style="cursor:pointer">
+
+    <area alt="lysosomes" 
+    title="lysosomes"
+    href="#" 
+    coords="429,599,457,568,495,561,520,566,543,577,555,589,553,603,497,635,454,626,437,614" 
+    shape="poly"
+    onclick="showElement(lysosomes)" 
+    style="cursor:pointer">
+
+    <area alt="lysosomes"
+    title="lysosomes"
+    href="#"
+    coords="644,542,612,552,606,569,611,589,632,603,655,602,692,595,717,576,715,546,683,528"
+    shape="poly"
+    onclick="showElement(lysosomes)"
+    style="cursor:pointer">
+
+    <area target="" alt="appareil de Golgi" 
+    title="appareil de Golgi" 
+    href="#" 
+    coords="624,336,639,348,636,371,637,382,597,418,604,432,627,434,633,445,647,441,672,432,678,441,688,436,694,421,698,443,703,453,718,462,727,478,740,473,728,445,715,428,727,427,741,436,754,435,766,444,783,442,783,429,753,423,742,418,727,414,721,405,729,402,743,409,773,409,780,415,781,403,747,400,750,386,730,371,751,370,760,362,742,353,720,358,692,341,676,347,665,345,666,352,632,323" 
+    shape="poly"
+    onclick="showElement('<h3>L&rsquo;appareil de Golgi ou dictyosome</h3><br>')"
+    style="cursor:pointer ">
+
+    <area target="" alt="vacuole" 
+    title="vacuole" 
+    href="#" 
+    coords="395,218,382,217,367,231,370,254,380,263,393,264,416,248,410,224" 
+    shape="poly"
+    onclick="showElement('<h3>vacuole<br></h3>')"
+    style="cursor:pointer">
+
+    <area target="" alt="centrosomes" 
+    title="centrosomes" 
+    href="#" 
+    coords="465,118,457,131,465,149,493,200,508,198,491,162,507,170,518,158" 
+    shape="poly"
+    onclick="showElement('<h3>centrosomes</h3><br>')"
+    style="cursor:pointer ">
+
+    <area target="" alt="noyau" 
+    title="noyau" 
+    href="#" 
+    coords="514,337,487,316,434,336,427,364,444,375,480,375,507,363,566,319,562,284,532,274,503,274,481,279,461,291,450,299,428,315,414,338,406,374,427,387,450,388,473,390,504,388,522,382,547,376,576,353,570,318" 
+    shape="poly"
+    onclick="showElement(noyauInfo)"
+    style="cursor: pointer;">
+
+    <area target="" alt="reticulum endoplasmique rugeux" 
+    title="reticulum endoplasmique rugeux" 
+    href="#" 
+    coords="526,128,523,141,558,180,543,170,531,169,520,174,569,234,573,223,591,243,599,238,611,246,598,221,606,233,623,221,616,199,579,151" 
+    shape="poly"
+    onclick="showElement('<h3>reticulum endoplasmique rugueux<h3><br>')"
+    style="cursor:pointer ">
+
+    <area target="" alt="reticulum endoplasmique rugeux" 
+    title="reticulum endoplasmique rugeux" 
+    href="#" 
+    coords="574,312,569,287,552,270,521,269,494,269,465,283,426,310,411,332,401,374,386,375,378,318,398,278,430,245,439,225,465,223,498,216,511,220,542,226,558,244,578,265,593,287,583,317" 
+    shape="poly"
+    onclick="showElement('<h3>reticulum endoplasmique rugueux<h3><br>')"
+    style="cursor:pointer ">
+
+    <area target="" alt="reticulum endoplasmique lisse" 
+    title="reticulum endoplasmique lisse" 
+    href="#" 
+    coords="473,435,462,441,463,458,440,454,424,466,425,477,437,488,469,489,481,504,489,494,515,490,540,484,548,476,565,472,579,454,558,444,536,459,525,449,508,450,489,436" 
+    shape="poly"
+    onclick="showElement('<h3>Le reticulum endoplasmique lisse</h3><br> Le reticulum endoplasmique lisse sert à la biosynthèse des lipides, des stéroides et de nouvelles membranes.')"
+    style="cursor:pointer ">
+
+    <area target="" alt="ribosome" 
+    title="ribosome" 
+    href="#" 
+    coords="445,420,8" 
+    shape="circle"
+    onclick="showElement('<h3>ribosome</h3><br>')"
+    style="cursor:pointer ">
+</map>
+</main>
+
+
+<footer class="footer">
+    <a href="presentation.html" style="color: white;">Pour en savoir plus sur nous</a>
+    <br>
+    <a href="cookies.html" class="lien">Cookies</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+<script>
+imageMapResize();
+</script>
+</body>
+</html>

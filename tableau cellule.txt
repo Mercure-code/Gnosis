@@ -1,0 +1,19 @@
+.table-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* conteneur image */
+.table-container {
+    max-width: 600px; /* limite la taille */
+}
+
+/* image cellule */
+#cellule {
+    width: 100%;
+    max-width: 600px; /* taille maximale */
+    height: auto;
+}

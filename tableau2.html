@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gnosis</title>
+    <script src="script.js"></script>
+    <script src="recherche.js" defer></script>
+    <link rel="stylesheet" href="tableau.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+<div class="header">
+
+    <div class="left">
+        <div id="results"></div>
+        <div class="burger-menu">
+            <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+            <div id="burgerContent" class="burger-content">
+                <a href="svt.html">Sciences de la Vie et de la Terre</a>
+                <a href="Physique.html">Physique-Chimie</a>
+            </div>
+        </div>
+        <a href="index.html">
+            <h1>&#8962;</h1>
+        </a>
+
+        <div class="info">&#128712;</div>
+    </div>
+    <div class="title" style="font-size: 2em; text-align: center; margin-right: auto; margin-left: auto;">Tableau Périodique des élements</div>
+    <input class="search-box"
+           type="text"
+           id="search"
+           placeholder="&#8981; Rechercher..."
+           onkeyup="rechercher()">
+           
+</div>
+
+<main class="page-content">
+<div class="table-layout">
+
+  <div class="table-container">
+    <img id="ptable" src="tableau-periodique-elements.jpg" usemap="#image-map">
+  </div>
+
+  <div id="info-panel">
+    <h2 id="element-name"></h2>
+    <div id="element-info"></div>
+  </div>
+
+</div>
+<map name="image-map">
+<area shape="rect" coords="269,34,306,77" onclick="showElement('<h4> Hydrogène</h4> <br> <h5>Masse Atomique : 1,008<br> Point de Fusion : -259.1°C<br> Point de Vaporisation : -252.9°C</h5>');" alt="Hydrogène" title="Hydrogène">
+<area shape="rect" coords="990,36,1029,76" onclick="showElement('<h4>Helium</h4><br><h5>Masse Atomique : 4.002602 <br> Point de Fusion : -272.2°C <br> Point de Vaporisation : -269°C</h5>')" alt="Hélium" title="Hélium">
+<area shape="rect" coords="269,79,305,121" onclick="showElement('<h4>Lithium</h4> <br> <h5>Masse Atomique : 6.4<br> Point de Fusion : 180.4°C<br> Point de Vaporisation : 1342°C</h5>')" alt="Lithium" title="Lithium">
+<area shape="rect" coords="311,83,350,121" onclick="showElement('<h4>Beryllium</h4><br><h5>Masse Atomique : 9,0121831 <br> Point de Fusion : 1 287°C<br> Point de Vaporisation : 2 470°C<h5>')" alt="Béryllium" title="Béryllium">
+<area shape="rect" coords="780,78,815,121" onclick="showElement('<h4>Bore</h4><br><h5>Masse Atomique : 10.81<br> Point de Fusion : 2075°C<br> Point de Vaporisation : 4000°C<h5>')" alt="Bore" title="Bore">
+<area shape="rect" coords="822,81,859,119" onclick="showElement(' <h4>Carbone</h4><br><h5>Masse Atomique : 12,011<br> Point de Fusion : 3642°C<br> Point de Vaporisation : 3642°C<h5>')" alt="Carbone" title="Carbone">
+<area shape="rect" coords="863,79,902,121" onclick="showElement('<h4>Azote</h4><br><h5>Masse Atomique : 14.007<br> Point de Fusion : -210.1°C<br> Point de Vaporisation : -195.8°C<h5>')" alt="Azote" title="Azote">
+<area shape="rect" coords="907,79,946,121" onclick="showElement('<h4>Oxygene</h4><br><h5>Masse Atomique : 15.999<br> Point de Fusion : -218°C<br> Point de Vaporisation : -183°C<h5>')" alt="Oxygène" title="Oxygène">
+<area shape="rect" coords="949,79,987,118" onclick="showElement('<h4>Fluor</h4><br><h5>Masse Atomique : 18,998403162<br> Point de Fusion : -220°C<br> Point de Vaporisation : -188.1°C<h5>')" alt="Fluor" title="Fluor">
+<area shape="rect" coords="991,82,1027,118" onclick="showElement('<h4>Neon</h4><br><h5>Masse Atomique : 20.1797<br> Point de Fusion : -248.6°C<br> Point de Vaporisation : -246.1°C<h5>')" alt="Néon" title="Néon">
+<area shape="rect" coords="269,125,308,164" onclick="showElement('<h4>Sodium</h4><br><h5>Masse Atomique : 22,98976928 <br> Point de Fusion : 97.72°C<br> Point de Vaporisation : 882.9°C<h5>')" alt="Sodium" title="Sodium">
+<area shape="rect" coords="311,125,349,162" onclick="showElement('<h4>Magnésium</h4><br><h5>Masse Atomique : 24,350<br> Point de Fusion : 650°C<br> Point de Vaporisation : 1090°C<h5>')" alt="Magnésium" title="Magnésium">
+<area shape="rect" coords="779,127,815,160" onclick="showElement('<h4>Aluminium</h4><br><h5>Masse Atomique : 26,9815384<br> Point de Fusion : 660.32°C<br> Point de Vaporisation : 2519°C<h5>')" alt="Aluminium" title="Aluminium">
+<area shape="rect" coords="822,125,861,166" onclick="showElement('Si')" alt="Silicium" title="Silicium">
+<area shape="rect" coords="863,125,902,162" onclick="showElement('P')" alt="Phosphore" title="Phosphore">
+<area shape="rect" coords="907,124,943,162" onclick="showElement('S')" alt="Soufre" title="Soufre">
+<area shape="rect" coords="948,124,987,164" onclick="showElement('Cl')" alt="Chlore" title="Chlore">
+<area shape="rect" coords="993,125,1030,165" onclick="showElement('Ar')" alt="Argon" title="Argon">
+<area shape="rect" coords="270,169,307,208" onclick="showElement('K')" alt="Potassium" title="Potassium">
+<area shape="rect" coords="311,168,349,206" onclick="showElement('Ca')" alt="Calcium" title="Calcium">
+<area shape="rect" coords="353,166,392,205" onclick="showElement('Sc')" alt="Scandium" title="Scandium">
+<area shape="rect" coords="394,166,433,205" onclick="showElement('Ti')" alt="Titane" title="Titane">
+<area shape="rect" coords="440,168,475,209" onclick="showElement('V')" alt="Vanadium" title="Vanadium">
+<area shape="rect" coords="481,168,519,208" onclick="showElement('Cr')" alt="Chrome" title="Chrome">
+<area shape="rect" coords="523,166,562,208" onclick="showElement('Mn')" alt="Manganèse" title="Manganèse">
+<area shape="rect" coords="567,166,602,205" onclick="showElement('Fe')" alt="Fer" title="Fer">
+<area shape="rect" coords="610,167,647,208" onclick="showElement('Co')" alt="Cobalt" title="Cobalt">
+<area shape="rect" coords="650,167,689,205" onclick="showElement('Ni')" alt="Nickel" title="Nickel">
+<area shape="rect" coords="694,168,729,207" onclick="showElement('Cu')" alt="Cuivre" title="Cuivre">
+<area shape="rect" coords="733,166,774,205" onclick="showElement('Zn')" alt="Zinc" title="Zinc">
+<area shape="rect" coords="776,167,815,207" onclick="showElement('Ga')" alt="Gallium" title="Gallium">
+<area shape="rect" coords="822,168,856,207" onclick="showElement('Ge')" alt="Germanium" title="Germanium">
+<area shape="rect" coords="867,170,903,210" onclick="showElement('As')" alt="Arsenic" title="Arsenic">
+<area shape="rect" coords="907,166,943,209" onclick="showElement('Se')" alt="Sélénium" title="Sélénium">
+<area shape="rect" coords="948,169,988,210" onclick="showElement('Br')" alt="Brome" title="Brome">
+<area shape="rect" coords="991,168,1027,204" onclick="showElement('Kr')" alt="Krypton" title="Krypton">
+<area shape="rect" coords="268,211,303,252" onclick="showElement('Rb')" alt="Rubidium" title="Rubidium">
+<area shape="rect" coords="311,213,350,249" onclick="showElement('Sr')" alt="Strontium" title="Strontium">
+<area shape="rect" coords="353,209,392,249" onclick="showElement('Y')" alt="Yttrium" title="Yttrium">
+<area shape="rect" coords="395,210,433,250" onclick="showElement('Zr')" alt="Zirconium" title="Zirconium">
+<area shape="rect" coords="438,213,475,252" onclick="showElement('Nb')" alt="Niobium" title="Niobium">
+<area shape="rect" coords="480,212,517,249" onclick="showElement('Mo')" alt="Molybdène" title="Molybdène">
+<area shape="rect" coords="521,215,564,251" onclick="showElement('Tc')" alt="Technétium" title="Technétium">
+<area shape="rect" coords="567,212,604,252" onclick="showElement('Ru')" alt="Ruthénium" title="Ruthénium">
+<area shape="rect" coords="609,215,645,249" onclick="showElement('Rh')" alt="Rhodium" title="Rhodium">
+<area shape="rect" coords="650,212,688,250" onclick="showElement('Pd')" alt="Palladium" title="Palladium">
+<area shape="rect" coords="694,212,730,251" onclick="showElement('Ag')" alt="Argent" title="Argent">
+<area shape="rect" coords="734,209,774,253" onclick="showElement('Cd')" alt="Cadmium" title="Cadmium">
+<area shape="rect" coords="779,215,815,251" onclick="showElement('In')" alt="Indium" title="Indium">
+<area shape="rect" coords="823,212,856,247" onclick="showElement('Sn')" alt="Étain" title="Étain">
+<area shape="rect" coords="861,210,901,250" onclick="showElement('Sb')" alt="Antimoine" title="Antimoine">
+<area shape="rect" coords="906,210,942,249" onclick="showElement('Te')" alt="Tellure" title="Tellure">
+<area shape="rect" coords="948,214,986,249" onclick="showElement('I')" alt="Iode" title="Iode">
+<area shape="rect" coords="990,210,1028,249" onclick="showElement('Xe')" alt="Xénon" title="Xénon">
+<area shape="rect" coords="269,259,308,292" onclick="showElement('Cs')" alt="Césium" title="Césium">
+<area shape="rect" coords="310,256,348,292" onclick="showElement('Ba')" alt="Baryum" title="Baryum">
+<area shape="rect" coords="356,359,392,398" onclick="showElement('La')" alt="Lanthane" title="Lanthane">
+<area shape="rect" coords="398,359,435,399" onclick="showElement('Ce')" alt="Cérium" title="Cérium">
+<area shape="rect" coords="440,359,477,398" onclick="showElement('Pr')" alt="Praséodyme" title="Praséodyme">
+<area shape="rect" coords="481,356,520,398" onclick="showElement('Nd')" alt="Néodyme" title="Néodyme">
+<area shape="rect" coords="524,359,564,398" onclick="showElement('Pm')" alt="Prométhium" title="Prométhium">
+<area shape="rect" coords="567,359,604,397" onclick="showElement('Sm')" alt="Samarium" title="Samarium">
+<area shape="rect" coords="607,356,649,398" onclick="showElement('Eu')" alt="Europium" title="Europium">
+<area shape="rect" coords="653,356,692,397" onclick="showElement('Gd')" alt="Gadolinium" title="Gadolinium">
+<area shape="rect" coords="696,358,733,397" onclick="showElement('Tb')" alt="Terbium" title="Terbium">
+<area shape="rect" coords="740,358,776,400" onclick="showElement('Dy')" alt="Dysprosium" title="Dysprosium">
+<area shape="rect" coords="781,359,819,397" onclick="showElement('Ho')" alt="Holmium" title="Holmium">
+<area shape="rect" coords="821,355,861,398" onclick="showElement('Er')" alt="Erbium" title="Erbium">
+<area shape="rect" coords="866,358,900,395" onclick="showElement('Tm')" alt="Thulium" title="Thulium">
+<area shape="rect" coords="907,358,948,398" onclick="showElement('Yb')" alt="Ytterbium" title="Ytterbium">
+<area shape="rect" coords="950,356,988,398" onclick="showElement('Lu')" alt="Lutécium" title="Lutécium">
+<area shape="rect" coords="395,256,430,292" onclick="showElement('Hafnium')" alt="Lanthane" title="Hafnium">
+<area shape="rect" coords="438,255,476,291" onclick="showElement('Tantale')" alt="Cérium" title="Tantale">
+<area shape="rect" coords="480,257,517,294" onclick="showElement('Tungstène')" alt="Praséodyme" title="Tungstène">
+<area shape="rect" coords="524,256,563,292" onclick="showElement('Rhénium')" alt="Néodyme" title="Rhénium">
+<area shape="rect" coords="567,256,604,293" onclick="showElement('Osmium')" alt="Prométhium" title="Osmium">
+<area shape="rect" coords="609,256,646,292" onclick="showElement('Iridium')" alt="Samarium" title="Iridium">
+<area shape="rect" coords="653,259,688,292" onclick="showElement('Platine')" alt="Europium" title="Platine">
+<area shape="rect" coords="696,259,732,294" onclick="showElement('Or')" alt="Gadolinium" title="Or">
+<area shape="rect" coords="736,253,774,291" onclick="showElement('Mercure')" alt="Terbium" title="Mercure">
+<area shape="rect" coords="776,253,815,295" onclick="showElement('Thallium')" alt="Dysprosium" title="Thallium">
+<area shape="rect" coords="821,255,858,290" onclick="showElement('Plomb')" alt="Holmium" title="Plomb">
+<area shape="rect" coords="859,256,899,294" onclick="showElement('Bismuth')" alt="Erbium" title="Bismuth">
+<area shape="rect" coords="908,256,947,292" onclick="showElement('Polonium')" alt="Thulium" title="Polonium">
+<area shape="rect" coords="948,254,988,295" onclick="showElement('Astate')" alt="Ytterbium" title="Astate">
+<area shape="rect" coords="993,258,1028,295" onclick="showElement('Radon')" alt="Lutécium" title="Radon">
+<area shape="rect" coords="270,299,307,336" onclick="showElement('Francium')" alt="Hafnium" title="Francium">
+<area shape="rect" coords="313,298,347,337" onclick="showElement('Radium')" alt="Tantale" title="Radium">
+<area shape="rect" coords="396,302,434,335" onclick="showElement('Actinium')" alt="Tungstène" title="Actinium">
+<area shape="rect" coords="436,299,474,334" onclick="showElement('Thorium')" alt="Rhénium" title="Thorium">
+<area shape="rect" coords="483,302,519,336" onclick="showElement('Protactinium')" alt="Osmium" title="Protactinium">
+<area shape="rect" coords="524,298,561,335" onclick="showElement('Uranium')" alt="Iridium" title="Uranium">
+<area shape="rect" coords="566,299,601,338" onclick="showElement('Neptunium')" alt="Platine" title="Neptunium">
+<area shape="rect" coords="608,298,643,336" onclick="showElement('Plutonium')" alt="Or" title="Plutonium">
+<area shape="rect" coords="653,302,689,338" onclick="showElement('Américium')" alt="Mercure" title="Américium">
+<area shape="rect" coords="694,298,730,337" onclick="showElement('Curium')" alt="Thallium" title="Curium">
+<area shape="rect" coords="735,299,774,339" onclick="showElement('Berkélium')" alt="Plomb" title="Berkélium">
+<area shape="rect" coords="779,302,813,338" onclick="showElement('Californium')" alt="Bismuth" title="Californium">
+<area shape="rect" coords="822,299,854,336" onclick="showElement('Einsteinium')" alt="Polonium" title="Einsteinium">
+<area shape="rect" coords="864,302,901,336" onclick="showElement('Fermium')" alt="Astate" title="Fermium">
+<area shape="rect" coords="904,296,943,339" onclick="showElement('Mendélévium')" alt="Radon" title="Mendélévium">
+<area shape="rect" coords="355,401,392,439" onclick="showElement('Nobelium')" alt="Francium" title="Nobelium">
+<area shape="rect" coords="398,400,435,438" onclick="showElement('Lawrencium')" alt="Radium" title="Lawrencium">
+<area shape="rect" coords="441,402,476,440" onclick="showElement('Rutherfordium')" alt="Actinium" title="Rutherfordium">
+<area shape="rect" coords="481,399,517,440" onclick="showElement('Dubnium')" alt="Thorium" title="Dubnium">
+<area shape="rect" coords="527,401,561,437" onclick="showElement('Seaborgium')" alt="Protactinium" title="Seaborgium">
+<area shape="rect" coords="567,402,607,439" onclick="showElement('Bohrium')" alt="Uranium" title="Bohrium">
+<area shape="rect" coords="610,401,648,439" onclick="showElement('Hassium')" alt="Neptunium" title="Hassium">
+<area shape="rect" coords="654,402,690,441" onclick="showElement('Meitnérium')" alt="Plutonium" title="Meitnérium">
+<area shape="rect" coords="693,401,730,439" onclick="showElement('Darmstadtium')" alt="Américium" title="Darmstadtium">
+<area shape="rect" coords="737,400,774,440" onclick="showElement('Roentgenium')" alt="Curium" title="Roentgenium">
+<area shape="rect" coords="781,400,815,439" onclick="showElement('Copernicium')" alt="Berkélium" title="Copernicium">
+<area shape="rect" coords="820,402,860,441" onclick="showElement('Nihonium')" alt="Californium" title="Nihonium">
+<area shape="rect" coords="863,402,902,440" onclick="showElement('Flerovium')" alt="Einsteinium" title="Flerovium">
+<area shape="rect" coords="908,400,946,438" onclick="showElement('Moscovium')" alt="Fermium" title="Moscovium">
+<area shape="rect" coords="950,401,987,440" onclick="showElement('Livermorium')" alt="Mendélévium" title="Livermorium">
+<area shape="rect" coords="950,300,987,338" onclick="showElement('Tennessine')" alt="Tennessine" title="Tennessine">
+<area shape="rect" coords="993,302,1033,340" onclick="showElement('Oganesson')" alt="Oganesson" title="Oganesson">
+</map>
+</div>
+<a href="tableau.html" ><img src="ptable.png" alt="" class="lien-image"></a>
+</div>
+
+<br><br>
+Le tableau périodique des élements regroupe tous les atomes connus, naturels ou artificiels, sa première version a été inventé par 
+<span class="tooltip-word">Dmitri Mendelïev
+    <span class="tooltip-box">
+
+        <div class="tooltip-content">
+            <img src="mendeliev.jpg" alt="Dmitri Mendeliev">
+
+            <div class="tooltip-text">
+                <b>Dmitri Mendeleïev</b><br>
+                Scientifique russe né le 8 février 1834 et mort le 2 février 1907.  
+                Il est le créateur du premier tableau périodique des éléments.
+            </div>
+        </div>
+
+    </span>
+</span>.
+Les éléments y sont classés par propriétés chimiques.
+</p>
+
+</main>    
+<footer class="footer">
+    <a href="presentation.html" class="lien">Pour en savoir plus sur nous</a>
+    <br>
+    <a href="cookies.html" class="lien">Cookies</a>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+    imageMapResize();
+</script>
+
+</body>
+</html>

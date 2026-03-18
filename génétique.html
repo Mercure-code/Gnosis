@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gnosis</title>
+    <script src="recherche.js" defer></script>
+</head>
+<body>
+    
+<div class="header">
+
+    <div class="left">
+        <div id="results"></div>
+        <div class="burger-menu">
+            <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+            <div id="burgerContent" class="burger-content">
+                <a href="svt.html">Sciences de la Vie et de la Terre</a>
+                <a href="Physique.html">Physique-Chimie</a>
+            </div>
+        </div>
+    <a href="index.html">
+       <img src="home.png">
+    </a>
+
+    <div class="info">&#128712;</div>
+
+        
+    </div>
+
+    <div class="title">La Génétique</div>
+
+    <input class="search-box"
+           type="text"
+           id="search"
+           placeholder="&#8981; Rechercher..."
+           onkeyup="rechercher()">
+
+</div>
+
+<div id="results"></div>
+
+<main class="page-content">
+    <h4>La génétique est la discipline de la biologie qui étudie la structure, le fonctionnement et l'évolution de l'information génétique. L'information génétique étant porté par l'<span class="tooltipe-word" data-tooltip="ADN">ADN</span></h4>
+    <div id="tooltip" class="tooltip">
+  <div class="tooltip-content"></div>
+</div>
+</main>
+
+<footer class="footer">
+    <a href="presentation.html" class="lien">Pour en savoir plus sur nous</a>
+    <br>
+    <a href="cookies.html" class="lien">Cookies</a>
+</footer>
+</body>
+</html>
