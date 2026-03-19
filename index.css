@@ -85,6 +85,8 @@ body {
     text-align: center;
     font-size: 48px;
     font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* Barre de recherche */
@@ -94,6 +96,7 @@ body {
     padding: 0 15px;
     border-radius: 6px;
     border: none;
+    margin-right: 5em;
 }
 
 /* Zone résultats */
@@ -276,3 +279,21 @@ body {
     gap:60px;
     flex-wrap:wrap;
 }
+
+button {
+  background-color: #1a73e8 ;/* Vert moderne */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px; /* Boutons arrondis */
+  cursor: pointer;
+  width: 80%;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease; /* Animation fluide */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  margin-top: 10px;
+}
+
