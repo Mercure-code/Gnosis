@@ -6,29 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gnosis</title>
     <link rel="stylesheet" href="index.css">
-    <script src="recherche.js" defer></script>
 </head>
 <body>
 <div class="header">
-
     <div class="left">
         <div class="burger-menu">
-    <div class="burger-icon" onclick="toggleMenu()">☰</div>
-
-    <div id="burgerContent" class="burger-content">
-        <a href="svt.html">Sciences de la Vie et de la Terre</a>
-        <a href="Physique.html">Physique-Chimie</a>
-    </div>
-</div>
+            <div class="burger-icon" onclick="toggleMenu()">☰</div>
+            <div id="burgerContent" class="burger-content">
+                <a href="svt.html">Sciences de la Vie et de la Terre</a>
+                <a href="Physique.html">Physique-Chimie</a>
+            </div>
+        </div>
 
         <a href="index.html" class="lien">
             <h1>&#8962;</h1>
         </a>
 
         <div class="info"><a href="presentation.html" class="lien"><h1>&#128712;</h1></a></div>
-
-        
-    </div>
+        <button class="button"><a href="compte.html" class="lien">S'inscrire/Se connecter</a></button>
+        </div>
 
     <div class="title">Gnosis</div>
 
@@ -37,7 +33,6 @@
            id="search"
            placeholder="&#8981; Rechercher..."
            onkeyup="rechercher()">
-
 </div>
 
 <div id="results"></div>
@@ -45,12 +40,8 @@
 <main class="page-content">
     <div>
         <a href="lien.html"><img src="imgsite.png" alt="" class="lien-image"></a>
-        <a></a>
     </div>
-
-
 </main>
-
 
 <footer class="footer">
     <a href="presentation.html" style="color: white;">Pour en savoir plus sur nous</a>
@@ -58,5 +49,10 @@
     <a href="cookies.html" class="lien">Cookies</a>
 </footer>
 
+<script src="auth.js"></script>
+<script>
+    // Vérifie la connexion de l'utilisateur au chargement de la page
+    window.onload = checkUserConnection;
+</script>
 </body>
 </html>
