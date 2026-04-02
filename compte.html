@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gnosis</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="compte.css">
+    <script src="recherche.js" defer></script>
+    <script src="compte.js" defer></script>
+</head>
+<body>
+<div class="header">
+
+    <div class="left">
+        <div class="burger-menu">
+    <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+    <div id="burgerContent" class="burger-content">
+        <a href="svt.html">Sciences de la Vie et de la Terre</a>
+        <a href="Physique.html">Physique-Chimie</a>
+    </div>
+</div>
+
+        <a href="index.html" class="lien">
+            <h1>&#8962;</h1>
+        </a>
+
+        <div class="info"><a href="presentation.html" class="lien"><h1>&#128712;</h1></a></div>
+
+        
+    </div>
+
+    <div class="title">Gnosis</div>
+
+    <input class="search-box"
+           type="text"
+           id="search"
+           placeholder="&#8981; Rechercher..."
+           onkeyup="rechercher()">
+
+</div>
+
+<div id="results"></div>
+
+<main class="page-content">
+
+
+  <div class="container">
+    <div id="auth-form">
+      <h1>Connexion</h1>
+      <input type="text" id="username" placeholder="Nom d'utilisateur">
+      <input type="password" id="password" placeholder="Mot de passe">
+      <button onclick="login()">Se connecter</button>
+      <p>Pas de compte ? <a href="#" onclick="showRegister()">S'inscrire</a></p>
+      <br>
+      <p style="font-size: 0.8em;">Vous venez de vous inscrire et ne pouvez pas vous connecter ? Rechargez la page.</p>
+    </div>
+
+    <div id="register-form" style="display: none;">
+      <h1>Inscription</h1>
+      <!-- Message en haut de la page -->
+  <div id="message" class="message"></div>
+      <input type="text" id="new-username" placeholder="Nom d'utilisateur">
+      <input type="password" id="new-password" placeholder="Mot de passe">
+      <input type="email" id="new-email" placeholder="Email">
+      <input type="number" id="new-age" placeholder="Âge" min="1" max="120">
+      <button onclick="register()">S'inscrire</button>
+      <p>Déjà un compte ? <a href="#" onclick="showLogin()">Se connecter</a></p>
+    </div>
+
+    <div id="welcome" style="display: none;">
+      <h1>Bienvenue, <span id="welcome-username"></span> !</h1>
+      <p>Email : <span id="welcome-email"></span></p>
+      <p>Âge : <span id="welcome-age"></span></p>
+      <button onclick="logout()">Se déconnecter</button>
+    </div>
+  </div>
+
+
+
+</main>
+
+
+<footer class="footer">
+    <a href="presentation.html" style="color: white;">Pour en savoir plus sur nous</a>
+    <br>
+    <a href="cookies.html" class="lien">Cookies</a>
+</footer>
+
+</body>
+</html>
