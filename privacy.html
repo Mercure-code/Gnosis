@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gnosis</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cookie.css">
+    <script src="recherche.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <div class="burger-menu">
+            <div class="burger-icon" onclick="toggleMenu()">☰</div>
+            <div id="burgerContent" class="burger-content">
+                <a href="svt.html">Sciences de la Vie et de la Terre</a>
+                <a href="Physique.html">Physique-Chimie</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="lien">
+            <h1>&#8962;</h1>
+        </a>
+        <button class="button"><a href="compte.html" class="lien">S'inscrire/Se connecter</a></button>
+        </div>
+
+    <div class="title">Gnosis</div>
+
+    <input class="search-box"
+           type="text"
+           id="search"
+           placeholder="&#8981; Rechercher..."
+           onkeyup="rechercher()">
+</div>
+
+<div id="results"></div>
+
+<main class="page-content">
+    <div class="privacy">
+        <h1>Conditions d'utilisation de Gnosis</h1>
+        <h3 style="text-align: left;">En date du 03/04/2026<br>
+            En utilisant le site Gnosis (ci-après « le Site »), vous acceptez sans réserve les présentes conditions d’utilisation.<br>
+            <h2>1) Protection des données personnelles</h2><br>
+            <h7> Collecte et utilisation</h7><br>
+            Les informations personnelles recoltées (email, nom d'utilisateur, âge etc.) lors de votre utilisation sont uniquement à but fonctionnel (création de compte et personnalisation de l'éxperience). Nous nous engageons à garder confidentiel ces informations et à ne les échanger, divulguer ou vendre à un tiers, sauf obligation légale. <br>
+            <h7>Durée de conservation</h7><br>
+            Vos données seront conservés jusqu'à la demande de suppression du compte. Après demande de suppression, vos données seront supprimés dans un délai de 30jours, sauf obligation légales.<br>
+            <h7>Droits des utilisateurs</h7><br>
+            Conformement au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants: <br>
+                -Accès: vous pouvez demander une copie de vos données <br>
+                -Rectification : demander la modification d'informations inexactes <br>
+                -Effacement: vous pouvez demander la suppression de vos données (sous réserves des obligations légales) <br>
+            Pour exercer vos droits, contactez-nous à l'adresse : calixteva8@gmail.com.<br>
+            <h2>2) Propriété intellectuelle</h2><br>
+            <h7>Droits réservés</h7><br>
+            L'intégralité du Site (textes, logos, design, code, base de données, etc.)(mis à part certaines) est protégée par le droit d'auteur et appartient à Gnosis. Toute reproduction, modification ou utilisation non autorisée est strictement interdite, sauf accord écrit préalable.
+            <h2>3) Modification eds conditions</h2>
+            Gnosis se reserve le droit de modifier ses conditions d'utilisations à tout moment. En cas de modification majeurs, une notification sera affichée sur le site, et un email sera envoyé. L'utilisation du site après modification vaut acceptation des nouveaux termes.
+            <h2>4) Responsabilités et limitations</h2>
+            <h7>Utilisation du site</h7>
+            Vous vous engagez à utiliser le Site de manière légale et conforme à ces conditions. Toute utilisation frauduleuse, abusive ou illicite pourra entrainer la suppression définitive de votre compte, ainsi que des poursuites judiciaires, si nécessaire.
+            <h7>Disponibilité</h7>
+            Gnosis se reserve le droit de suspendre l'accès au site à tout moment en cas de besoin (maintenance, pannes etc.) ainsi que le droit de suppression du site. Gnosis ne peut être tenu responsable des préjudices liés à l'indisponibilité du site.
+            <h7>Liens externes</h7>
+            Le Site peut contenir des liens menant à des sites tiers. Gnosis ne contrôle pas ces sites et décline toute responsabilité quant à leur contenu, ou pratiques en matière de confidentialité.
+            <h2>5) Résiliations et suspension</h2>
+            Gnosis peut suspendre ou résilier votre compte sans préavis en cas de :<br>
+            violation des conditions<br>
+            Inactivité de plus de 12 mois<br>
+            <h2>6) Lois applicables et litiges</h2>
+            Ces conditions sont régies par le droit français, tout litige sera soumis au tribunaux compétents de Paris, nonobstant pluralité de défendeurs.
+            <h2>Pour toute question, contactez-nous à : calixteva8@gmail.com</h2>
+        </h3>
+    </div>
+</main>
+
+<footer class="footer">
+    <a href="presentation.html" style="color: white;">Pour en savoir plus sur nous</a>
+    <br>
+    <a href="cookies.html" class="lien">Cookies</a>
+</footer>
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <p>Nous utilisons des cookies pour le bon fonctionnement du site. En continuant, vous acceptez notre <a href="/politique-cookies">politique de cookies</a>.</p>
+      <button id="accept-cookies" class="cookie-button">J'ai compris</button>
+    </div>
+  </div>
+</body>
+</html>
