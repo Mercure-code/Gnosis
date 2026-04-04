@@ -1,6 +1,7 @@
 h1 {
     color: black;
     font-size: 3em;
+    text-align: center;
 }
 
 h2 {
@@ -26,6 +27,11 @@ h5 {
     font-size: 1em;
 }
 
+h7 {
+    font-weight: 700;
+    font-size: 1;
+}
+
 /* RESET */
 * {
     box-sizing: border-box;
@@ -38,7 +44,7 @@ html, body {
     height: 100%;
 }
 
-/* LAYOUT PRINCIPAL */
+
 body {
     display: flex;
     flex-direction: column;
@@ -47,7 +53,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* HEADER */
 .header {
     width: 100%;
     background: #222;
@@ -59,21 +64,19 @@ body {
     background-color: blue;
 }
 
-/* Partie gauche (burger, home, info) */
+
 .left {
     display: flex;
     align-items: center;
     gap: 25px;
 }
 
-/* Icône home */
 .left h1 {
     font-size: 40px;
     cursor: pointer;
     color: white;
 }
 
-/* Icône info */
 .info {
     font-size: 40px;
     cursor: pointer;
@@ -314,4 +317,12 @@ button {
   transition: all 0.3s ease; /* Animation fluide */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
   margin-top: 10px;
+}
+
+.svtindex {
+    color: black;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5%;
 }
