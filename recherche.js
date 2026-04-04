@@ -55,3 +55,24 @@ function toggleMenu() {
         menu.style.display = "block";
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+  
+    // Vérifie si l'utilisateur a déjà donné son consentement
+    if (!localStorage.getItem('cookieConsent')) {
+      cookieBanner.style.display = 'flex';
+    }
+  
+    acceptBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      cookieBanner.style.display = 'none';
+    });
+  
+    declineBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'declined');
+      cookieBanner.style.display = 'none';
+    });
+  });
