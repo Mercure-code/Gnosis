@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gnosis-Nos Sources</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cookie.css">
+    <script src="recherche.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <div class="burger-menu">
+            <div class="burger-icon" onclick="toggleMenu()">☰</div>
+            <div id="burgerContent" class="burger-content">
+                <a href="svt.html">Sciences de la Vie et de la Terre</a>
+                <a href="Physique.html">Physique-Chimie</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="lien">
+            <h1>&#8962;</h1>
+        </a>
+        <button class="button"><a href="compte.html" class="lien">S'inscrire/Se connecter</a></button>
+        </div>
+
+    <div class="title">Gnosis</div>
+
+    <input class="search-box"
+           type="text"
+           id="search"
+           placeholder="&#8981; Rechercher..."
+           onkeyup="rechercher()">
+</div>
+
+<div id="results"></div>
+
+<main class="page-content">
+    <h1> Nos Sources </h1>
+     <h3 style="text-align: left;">En date du 15/05/2026<br>
+        Nos sources sont : <li> Tout en fiche mémo visuel de biologie</li> de <strong> Daniel Richard, Patrick Chevalet, Christine Joly-Viard, Thierry Soubaya</strong> aux édtitions Dunod; 
+        <li><a href:"https://ptable.com/?lang=fr#Propri%C3%A9t%C3%A9s">Ptable</a></li>;
+        <li>Wikipedia</li>;
+        <li>Nicole Angelier née Delobel</li>, Docteur d'Etat.
+    
+</main>
+
+<footer class="footer">
+    <a href="presentation.html" style="color: white;">Pour en savoir plus sur nous</a>
+    <br>
+    <a href="cookies.html" class="lien">Cookies</a>
+    <br>
+    <a href="privacy.html"class="lien">Nos CGU</a>
+</footer>
+  </div>
+</body>
+</html>
